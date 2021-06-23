@@ -4,6 +4,10 @@ services:
     image: influxdb
     environment:
       - INFLUXDB_ADMIN_ENABLED:true
+      - DOCKER_INFLUXDB_INIT_USERNAME: admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD: admin
+      - DOCKER_INFLUXDB_INIT_ORG: mnofresno
+      - DOCKER_INFLUXDB_INIT_BUCKET: iot
     ports:
       - 8083:8083
       - 8086:8086
