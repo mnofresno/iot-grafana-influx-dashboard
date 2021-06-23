@@ -9,8 +9,12 @@ services:
       - 8086:8086
   api:
     image: mnofresno/iot-api:2.0
+    build:
+      context: ./api
     ports:
-      - 1337:1337
+      - 1387:1387
+    environment:
+      PORT: 1387
   dashboard:
     image: grafana/grafana
     ports:

@@ -1,6 +1,6 @@
 # IOT Dashboard
 
-## This project contains the following service
+## This project contains the following services
 
 * API for receiving IOT requests and storing them on a DB
 * Influx DB timeseries database to save the data
