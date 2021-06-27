@@ -9,7 +9,11 @@ services:
     links:
       - influxdb
     ports:
-    - '127.0.0.1:8125:8125/udp'
+      - '127.0.0.1:8125:8125/udp'
+      - '127.0.0.1:8126:8126'
+    environment:
+      BASIC_AUTH_HTTP_USER: ${BASIC_AUTH_SENSOR_USER}
+      BASIC_AUTH_HTTP_PASS: ${BASIC_AUTH_SENSOR_PASS}
 
   influxdb:
     image: influxdb:1.8-alpine
