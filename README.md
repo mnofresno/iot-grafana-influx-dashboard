@@ -69,6 +69,24 @@ Ops/s:		30.548965899738
 Killed by Ctrl+C
 ```
 
+## HTTP Listener Plugin
+
+Using this plugin you can send IOT sensors data using query parameters
+
+https://github.com/influxdata/telegraf/blob/master/plugins/parsers/form_urlencoded/README.md
+
+Here is an example call made with curl:
+
+Request:
+```bash
+curl -i -XGET 'http://localhost:8080/telegraf?tag1=foo&field1=0.42&field2=42'
+```
+
+Output:
+```
+mymetric,tag1=foo field1=0.42,field2=42
+```
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
